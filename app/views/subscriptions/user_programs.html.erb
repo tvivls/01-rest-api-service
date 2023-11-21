@@ -1,0 +1,19 @@
+<h1>User programs</h1>
+<%
+  user_subscriptions = {}
+
+  @user_programs.each do |subscription|
+    user = subscription.user
+     program = subscription.program
+
+     if user_subscriptions.key?(user)
+       user_subscriptions[user] << program.title
+     else
+       user_subscriptions[user] = [program.title]
+     end
+  end
+
+  user_subscriptions.each do |user, programs|
+%>
+  <p><%="#{user.name} - #{programs.join(', ')}" %></p>
+<% end %>

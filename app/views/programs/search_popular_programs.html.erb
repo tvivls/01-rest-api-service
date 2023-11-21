@@ -1,0 +1,10 @@
+<h1>Popular Programs</h1>
+
+<ul>
+  <% @popular_programs.each do |program| %>
+    <li>
+      <h2><%= program.title %></h2>
+      <p><%= program.description %></p>
+    </li>
+  <% end %>
+</ul>

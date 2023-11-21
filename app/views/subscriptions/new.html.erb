@@ -1,0 +1,11 @@
+<h1>Create new subscription</h1>
+
+<%= form_with(model: @subscriptions, url: subscriptions_path) do |form| %>
+  <%= form.label :user_id %>
+  <%= form.text_field :user_id %>
+
+  <%= form.label :program_id %>
+  <%= form.text_field :program_id %>
+
+  <%= form.submit 'Create' %>
+<% end %>

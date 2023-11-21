@@ -1,0 +1,11 @@
+<h1>Create new user</h1>
+
+<%= form_with(model: @users, url: users_path) do |form| %>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.submit 'Create' %>
+<% end %>
